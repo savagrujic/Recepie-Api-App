@@ -61,6 +61,7 @@ export default function Recepie() {
   return (
     <>
     <div className="container">
+      <h1 style={{position: 'absolute', left: 10}}>Cook<span style={{color:'yellowgreen'}}>Pal</span></h1>
     <form onSubmit={HandlePieSearch}>
       <input 
       value={searchpie}
@@ -87,6 +88,10 @@ export default function Recepie() {
       }
     </div>
     </div>
+    <footer>
+      <p>By Sava Grujić</p>
+      <a href="https://github.com/savagrujic/Recepie-Api-App">Github</a>
+    </footer>
     </>
   )
 }

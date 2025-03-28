@@ -26,6 +26,7 @@ section:hover {
     align-items: center;
     justify-content: center;
     gap: 10px   ;
+    margin-bottom: 10px;
     
 }
 .container {
@@ -34,13 +35,14 @@ section:hover {
     align-items: center;
 
     form {
-        margin: 20px;
+        margin-bottom: 20px;
     }
 
     input {
         width: 25vw;
         height: 4vh;
         border-radius: 10px;
+        padding: 1px;
     }
 }
 
@@ -48,7 +50,25 @@ button {
     margin-left: 10px;
     background-color: greenyellow;
     color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 13px;
     border: none;
     border-radius: 10px;
+    font-weight: bold;
+}
+footer {
+    background-color: black;
+    color: yellowgreen;
+    padding: 2vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-weight: bold;
+    }
+    a {
+        color: greenyellow;
+        text-decoration: none;
+        margin: 10px;
+    }
 }

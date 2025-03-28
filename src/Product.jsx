@@ -23,7 +23,7 @@ export default function Product() {
             }
             setIngridient(temp)
      
-     //   console.log(ingrident)
+       console.log(meal)
 
 
     },[meal])
@@ -31,18 +31,13 @@ export default function Product() {
     <>
     <FaArrowLeftLong className="back" onClick={() => navigate('/')} />
     <div className="wrapper">
-    <div>
     <p className="title">{meal.strMeal}</p>
-    <p className="tags">#{meal.strTags}</p>
+    {meal.strTags === null ? ( <p className="tags">No Tags</p>):( <p className="tags">#{meal.strTags}</p>)}
+    <div className="container1">
+  
 
     <img src={meal.strMealThumb} className="imgthumb" />
-    </div> 
-    <p className="desc">{meal.strInstructions}</p>
 
-   
-  
-    
-    </div>
     <div className="ingdiv">
         <h1>Ingridients</h1>
     {ingrident.map((item) => (
@@ -53,6 +48,19 @@ export default function Product() {
        
     ))}
      </div>
+    </div> 
+
+
+     <div className="desc">
+    <h3>Category: {meal.strCategory}</h3>
+    <h3>Country Origin: {meal.strArea}</h3>
+    <p className="desc">{meal.strInstructions}</p>
+    </div>
+   
+  
+    
+    </div>
+   
     </>
     )
 }

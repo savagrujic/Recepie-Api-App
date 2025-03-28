@@ -27,8 +27,11 @@ export default function Product() {
      
        console.log(meal)
         let a = meal.strTags
+        if(a) {
         let temptags = a.split(',')
+        
         setTags(temptags)
+        }       
 
     },[meal])
     return(
@@ -37,7 +40,7 @@ export default function Product() {
     <div className="wrapper">
     <p className="title">{meal.strMeal}</p>
     <div style={{display: 'flex'}}>
-    {meal.strTags === null ? ( <p className="tags">No Tags</p>): tags.map((item) => (<p>#{item}</p>))}
+    {meal.strTags === null ? ( <p className="tags">No Tags</p>): tags.map((item) => (<p className="tags">#{item}</p>))}
     </div>
     <div className="container1">
   

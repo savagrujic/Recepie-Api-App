@@ -73,6 +73,12 @@ img {
     align-items: center;
 }
 
+.tags {
+    background-color: greenyellow;
+    margin: 5px;
+    border: 1px black solid;
+}
+
 @media only screen and (max-width: 600px) {
     .container1 {
         display: flex;

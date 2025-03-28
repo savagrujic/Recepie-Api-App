@@ -56,6 +56,7 @@
 
 img {
     border-radius: 30px;
+    max-height: 70vh;
 }
 
 .desc {
@@ -69,4 +70,5 @@ img {
 
 .container1 {
     display: flex;
+    align-items: center;
 }

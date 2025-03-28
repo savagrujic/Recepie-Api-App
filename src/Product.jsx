@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, useLocation,useNavigate} from "react-router-dom"
+import { FaArrowLeftLong } from "react-icons/fa6";
 import './product.css'
 export default function Product() {
     const {state} = useLocation()
@@ -9,6 +10,7 @@ export default function Product() {
     const navigate = useNavigate()
     const [ingrident, setIngridient] = useState([])
         useEffect(() => {
+            document.documentElement.scrollTop = 0
             const temp = []
             for(let i = 1; i <= 20; i++) {
              const ing =  meal[`strIngredient${i}`]
@@ -27,7 +29,7 @@ export default function Product() {
     },[meal])
     return(
     <>
-    <p className="back" onClick={() => navigate('/')}>Go Back</p>
+    <FaArrowLeftLong className="back" onClick={() => navigate('/')} />
     <div className="wrapper">
     <div>
     <p className="title">{meal.strMeal}</p>

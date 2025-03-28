@@ -9,6 +9,7 @@ export default function Product() {
     const meal = food[id]
     const navigate = useNavigate()
     const [ingrident, setIngridient] = useState([])
+    const [tags,setTags] = useState([])
         useEffect(() => {
             document.documentElement.scrollTop = 0
             const temp = []
@@ -18,13 +19,16 @@ export default function Product() {
                 temp.push(ing)
              }
 
+
                
 
             }
             setIngridient(temp)
      
        console.log(meal)
-
+        let a = meal.strTags
+        let temptags = a.split(',')
+        setTags(temptags)
 
     },[meal])
     return(
@@ -32,7 +36,9 @@ export default function Product() {
     <FaArrowLeftLong className="back" onClick={() => navigate('/')} />
     <div className="wrapper">
     <p className="title">{meal.strMeal}</p>
-    {meal.strTags === null ? ( <p className="tags">No Tags</p>):( <p className="tags">#{meal.strTags}</p>)}
+    <div style={{display: 'flex'}}>
+    {meal.strTags === null ? ( <p className="tags">No Tags</p>): tags.map((item) => (<p>#{item}</p>))}
+    </div>
     <div className="container1">
   
 
